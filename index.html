@@ -513,7 +513,7 @@
         </div>
     </section>
 
-    <section class="adaptive-section py-24 relative bg-transparent dark:bg-[#440d19] overflow-hidden border-t border-gray-200 dark:border-brand-gold/20 transition-colors duration-700">
+    <section id="quy-trinh" class="adaptive-section py-24 relative bg-transparent dark:bg-[#440d19] overflow-hidden border-t border-gray-200 dark:border-brand-gold/20 transition-colors duration-700">
         <!-- Nền giấy cho Light mode -->
         <div class="absolute inset-0 bg-[url('https://khoiminhcst.vn/static/landingpage/hi-long-van/images/bg_paper2.jpg')] bg-cover bg-center bg-fixed dark:hidden z-0 opacity-80 mix-blend-multiply pointer-events-none"></div>
         <div class="absolute inset-0 bg-white/40 dark:hidden z-0 pointer-events-none"></div>
@@ -527,52 +527,102 @@
                 </p>
             </div>
 
-            <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-                <article class="reveal-up flex flex-col rounded-2xl overflow-hidden bg-white/70 dark:bg-[#521422]/85 border border-gray-300 dark:border-brand-gold/30 shadow-sm">
-                    <div class="grid grid-cols-2 gap-1.5 p-1.5 h-[440px] grid-rows-[3fr_2fr]">
-                        <img src="assets/photos/che-2.webp" alt="Điêu khắc gia tạo hình tượng bằng đất sét" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
-                        <img src="assets/photos/che-1.webp" alt="Chỉnh sửa chi tiết tượng đất sét" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
-                        <img src="assets/photos/che-3.webp" alt="Hoàn thiện bản đất sét" loading="lazy" class="w-full h-full min-h-0 col-span-2 object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
+            <div class="max-w-5xl lg:max-w-6xl mx-auto relative px-2 sm:px-6">
+                <!-- Đường trục timeline vàng nối các bước -->
+                <div class="hidden md:block absolute left-1/2 top-10 bottom-10 w-px bg-gradient-to-b from-brand-gold/60 via-brand-gold/30 to-brand-gold/60 -translate-x-1/2 pointer-events-none"></div>
+
+                <!-- BƯỚC 01: TẠO HÌNH (Chữ bên Trái - Ảnh bên Phải) -->
+                <div class="flex flex-col md:flex-row items-center justify-between mb-20 md:mb-28 relative reveal-up">
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-12 h-12 lg:w-14 lg:h-14 rounded-full border-2 border-brand-gold bg-white dark:bg-[#521422] flex items-center justify-center font-serif text-lg lg:text-xl font-bold text-brand-gold z-10 hidden md:flex shadow-md dark:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-colors duration-700">01</div>
+
+                    <div class="w-full md:w-1/2 text-center md:text-right mb-8 md:mb-0 md:pr-12 lg:pr-16">
+                        <div class="md:hidden w-12 h-12 rounded-full border-2 border-brand-gold bg-white dark:bg-[#521422] flex items-center justify-center font-serif text-lg font-bold text-brand-gold mx-auto mb-4 shadow-sm transition-colors duration-700">01</div>
+                        <p class="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-2">Giai đoạn 01 · Đất sét</p>
+                        <h3 class="text-2xl lg:text-3xl font-serif font-bold uppercase mb-4 tracking-wider text-brand-text dark:text-white transition-colors duration-700">Tạo Hình</h3>
+                        <p class="text-[15px] leading-[1.9] font-normal text-brand-muted dark:text-brand-gold-light/85 max-w-md mx-auto md:ml-auto md:mr-0 transition-colors duration-700">
+                            Tác phẩm điêu khắc được khởi phát và hoàn thiện trên chất liệu đất sét dương bản. Từng đường nét cơ bắp, bờm ngựa tung gió và thần thái uy dũng được Điêu khắc gia Vũ Dũng trực tiếp tạo tác, gửi gắm linh hồn và khí phách của bậc kỳ tài.
+                        </p>
                     </div>
-                    <div class="p-6 md:p-8 flex-1">
-                        <div class="flex flex-col items-start gap-4 mb-4">
-                            <span class="w-11 h-11 shrink-0 rounded-full border-2 border-brand-gold flex items-center justify-center font-serif text-lg font-bold text-brand-gold">01</span>
-                            <h3 class="text-xl lg:text-2xl whitespace-nowrap font-serif font-bold uppercase tracking-wider text-brand-text dark:text-white">Tạo Hình</h3>
+
+                    <div class="w-full md:w-1/2 md:pl-12 lg:pl-16">
+                        <div class="grid grid-cols-2 gap-2.5 max-w-lg mx-auto md:mx-0 p-2 rounded-2xl bg-white/60 dark:bg-[#521422]/60 border border-gray-300 dark:border-brand-gold/30 shadow-md">
+                            <div class="aspect-[3/4] overflow-hidden rounded-xl">
+                                <img src="assets/photos/che-2.webp" alt="Điêu khắc gia tạo hình tượng bằng đất sét" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="aspect-[3/4] overflow-hidden rounded-xl">
+                                <img src="assets/photos/che-1.webp" alt="Chỉnh sửa chi tiết tượng đất sét" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="col-span-2 aspect-[16/9] overflow-hidden rounded-xl">
+                                <img src="assets/photos/che-3.webp" alt="Hoàn thiện bản đất sét" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
                         </div>
-                        <p class="text-[15px] leading-[1.8] font-normal text-brand-muted dark:text-brand-gold-light/80">Tác phẩm điêu khắc được hoàn thiện trên chất liệu đất sét dương bản.</p>
                     </div>
-                </article>
-                <article class="reveal-up flex flex-col rounded-2xl overflow-hidden bg-white/70 dark:bg-[#521422]/85 border border-gray-300 dark:border-brand-gold/30 shadow-sm">
-                    <div class="grid grid-cols-2 gap-1.5 p-1.5 h-[440px] grid-rows-[3fr_2fr]">
-                        <img src="assets/photos/kh-1.webp" alt="Bản đất sét dương bản trước khi lấy khuôn" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
-                        <img src="assets/photos/kh-3.webp" alt="Chi tiết người và ngựa trên bản gốc" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
-                        <img src="assets/photos/kh-2.webp" alt="Bản đúc từ khuôn trước khi mạ" loading="lazy" class="w-full h-full min-h-0 col-span-2 object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
+                </div>
+
+                <!-- BƯỚC 02: TẠO KHUÔN (Ảnh bên Trái - Chữ bên Phải) -->
+                <div class="flex flex-col md:flex-row-reverse items-center justify-between mb-20 md:mb-28 relative reveal-up">
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-12 h-12 lg:w-14 lg:h-14 rounded-full border-2 border-brand-gold bg-white dark:bg-[#521422] flex items-center justify-center font-serif text-lg lg:text-xl font-bold text-brand-gold z-10 hidden md:flex shadow-md dark:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-colors duration-700">02</div>
+
+                    <div class="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0 md:pl-12 lg:pl-16">
+                        <div class="md:hidden w-12 h-12 rounded-full border-2 border-brand-gold bg-white dark:bg-[#521422] flex items-center justify-center font-serif text-lg font-bold text-brand-gold mx-auto mb-4 shadow-sm transition-colors duration-700">02</div>
+                        <p class="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-2">Giai đoạn 02 · Đổ khuôn</p>
+                        <h3 class="text-2xl lg:text-3xl font-serif font-bold uppercase mb-4 tracking-wider text-brand-text dark:text-white transition-colors duration-700">Tạo Khuôn</h3>
+                        <p class="text-[15px] leading-[1.9] font-normal text-brand-muted dark:text-brand-gold-light/85 max-w-md mx-auto md:mr-auto md:ml-0 transition-colors duration-700">
+                            Đổ khuôn âm bản chuẩn xác từ nguyên mẫu đất sét để chuyển sang các chất liệu bền vững vĩnh cửu như cốt đồng nguyên khối hoặc cốt đá tổng hợp. Quy trình đúc khuôn đòi hỏi sự tỉ mỉ tuyệt đối nhằm lưu giữ nguyên vẹn từng vi mạch khối hình nguyên bản.
+                        </p>
                     </div>
-                    <div class="p-6 md:p-8 flex-1">
-                        <div class="flex flex-col items-start gap-4 mb-4">
-                            <span class="w-11 h-11 shrink-0 rounded-full border-2 border-brand-gold flex items-center justify-center font-serif text-lg font-bold text-brand-gold">02</span>
-                            <h3 class="text-xl lg:text-2xl whitespace-nowrap font-serif font-bold uppercase tracking-wider text-brand-text dark:text-white">Tạo Khuôn</h3>
+
+                    <div class="w-full md:w-1/2 md:pr-12 lg:pr-16">
+                        <div class="grid grid-cols-2 gap-2.5 max-w-lg mx-auto md:mx-0 md:ml-auto p-2 rounded-2xl bg-white/60 dark:bg-[#521422]/60 border border-gray-300 dark:border-brand-gold/30 shadow-md">
+                            <div class="aspect-[3/4] overflow-hidden rounded-xl">
+                                <img src="assets/photos/kh-1.webp" alt="Bản đất sét dương bản trước khi lấy khuôn" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="aspect-[3/4] overflow-hidden rounded-xl">
+                                <img src="assets/photos/kh-3.webp" alt="Chi tiết người và ngựa trên bản gốc" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="col-span-2 aspect-[16/9] overflow-hidden rounded-xl">
+                                <img src="assets/photos/kh-2.webp" alt="Bản đúc từ khuôn trước khi mạ" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
                         </div>
-                        <p class="text-[15px] leading-[1.8] font-normal text-brand-muted dark:text-brand-gold-light/80">Đổ khuôn âm bản để chuyển sang những chất liệu bền vững như cốt đồng hay cốt đá tổng hợp tùy biến.</p>
                     </div>
-                </article>
-                <article class="reveal-up flex flex-col rounded-2xl overflow-hidden bg-white/70 dark:bg-[#521422]/85 border border-gray-300 dark:border-brand-gold/30 shadow-sm">
-                    <div class="grid grid-cols-2 gap-1.5 p-1.5 h-[440px] grid-rows-3">
-                        <img src="assets/photos/mv-1.webp" alt="Dát lá vàng lên tượng ngựa" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
-                        <img src="assets/photos/mv-2.webp" alt="Phủi vàng bằng cọ mềm" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
-                        <img src="assets/photos/mv-3.webp" alt="Dát vàng trên xưởng" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
-                        <img src="assets/photos/mv-4.webp" alt="Hoàn thiện chi tiết bằng cọ" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
-                        <img src="assets/photos/mv-5.webp" alt="Mài nhẵn bản mạ đồng" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
-                        <img src="assets/photos/mv-6.webp" alt="Tượng mạ đồng hoàn thiện" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
+                </div>
+
+                <!-- BƯỚC 03: HOÀN THIỆN & MẠ KIM (Chữ bên Trái - Ảnh bên Phải) -->
+                <div class="flex flex-col md:flex-row items-center justify-between relative reveal-up">
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-12 h-12 lg:w-14 lg:h-14 rounded-full border-2 border-brand-gold bg-white dark:bg-[#521422] flex items-center justify-center font-serif text-lg lg:text-xl font-bold text-brand-gold z-10 hidden md:flex shadow-md dark:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-colors duration-700">03</div>
+
+                    <div class="w-full md:w-1/2 text-center md:text-right mb-8 md:mb-0 md:pr-12 lg:pr-16">
+                        <div class="md:hidden w-12 h-12 rounded-full border-2 border-brand-gold bg-white dark:bg-[#521422] flex items-center justify-center font-serif text-lg font-bold text-brand-gold mx-auto mb-4 shadow-sm transition-colors duration-700">03</div>
+                        <p class="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-2">Giai đoạn 03 · Khải hoàn</p>
+                        <h3 class="text-2xl lg:text-3xl font-serif font-bold uppercase mb-4 tracking-wider text-brand-text dark:text-white transition-colors duration-700">Hoàn Thiện</h3>
+                        <p class="text-[15px] leading-[1.9] font-normal text-brand-muted dark:text-brand-gold-light/85 max-w-md mx-auto md:ml-auto md:mr-0 transition-colors duration-700">
+                            Nghệ nhân lành nghề bậc nhất hoàn thiện hai phiên bản danh giá: mạ vàng 24K thủ công truyền thống và mạ đồng Nano tối tân. Trải qua hàng chục bước mài nhẵn, quét cọ mềm, dát từng lá kim và phủ bảo vệ nano, kiến tạo nên sắc kim uy quyền trường tồn cùng thời gian.
+                        </p>
                     </div>
-                    <div class="p-6 md:p-8 flex-1">
-                        <div class="flex flex-col items-start gap-4 mb-4">
-                            <span class="w-11 h-11 shrink-0 rounded-full border-2 border-brand-gold flex items-center justify-center font-serif text-lg font-bold text-brand-gold">03</span>
-                            <h3 class="text-xl lg:text-2xl whitespace-nowrap font-serif font-bold uppercase tracking-wider text-brand-text dark:text-white">Hoàn Thiện</h3>
+
+                    <div class="w-full md:w-1/2 md:pl-12 lg:pl-16">
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 max-w-lg mx-auto md:mx-0 p-2 rounded-2xl bg-white/60 dark:bg-[#521422]/60 border border-gray-300 dark:border-brand-gold/30 shadow-md">
+                            <div class="aspect-[4/3] overflow-hidden rounded-xl">
+                                <img src="assets/photos/mv-1.webp" alt="Dát lá vàng lên tượng ngựa" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="aspect-[4/3] overflow-hidden rounded-xl">
+                                <img src="assets/photos/mv-2.webp" alt="Phủi vàng bằng cọ mềm" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="aspect-[4/3] overflow-hidden rounded-xl">
+                                <img src="assets/photos/mv-3.webp" alt="Dát vàng trên xưởng" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="aspect-[4/3] overflow-hidden rounded-xl">
+                                <img src="assets/photos/mv-4.webp" alt="Hoàn thiện chi tiết bằng cọ" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="aspect-[4/3] overflow-hidden rounded-xl">
+                                <img src="assets/photos/mv-5.webp" alt="Mài nhẵn bản mạ đồng" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="aspect-[4/3] overflow-hidden rounded-xl">
+                                <img src="assets/photos/mv-6.webp" alt="Tượng mạ đồng hoàn thiện" loading="lazy" class="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer">
+                            </div>
                         </div>
-                        <p class="text-[15px] leading-[1.8] font-normal text-brand-muted dark:text-brand-gold-light/80">Nghệ nhân lành nghề bậc nhất hoàn thiện hai phiên bản: mạ vàng 24K và mạ đồng Nano, qua hàng chục bước chế tác tỉ mỉ.</p>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
