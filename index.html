@@ -71,13 +71,15 @@
         .btn:disabled { opacity: .5; pointer-events: none; }
         .btn-sm { min-height: 40px; padding: 0 1.25rem; letter-spacing: .15em; }
         .btn-block { width: 100%; }
-        .btn-ghost { border-color: transparent; background: transparent; color: var(--ink-muted); letter-spacing: .1em; }
-        .btn-ghost::before { display: none; }
-        .btn-ghost:hover { color: var(--gold); box-shadow: none; }
-        .dark .btn-ghost { color: rgba(243,229,171,.7); }
+        .btn-ghost { border-color: transparent !important; background: transparent !important; color: var(--ink-muted); letter-spacing: .1em; }
+        .btn-ghost::before { display: none !important; }
+        .btn-ghost:hover { color: var(--gold) !important; box-shadow: none !important; }
+        .dark .btn-ghost { color: rgba(243,229,171,.7) !important; background: transparent !important; }
+        .always-dark-section .btn-ghost { color: rgba(243,229,171,.75) !important; background: transparent !important; border-color: transparent !important; }
+        .always-dark-section .btn-ghost:hover { color: var(--gold) !important; background: rgba(212,175,55,.1) !important; }
         /* Light theme: nền sáng => chữ/viền ink để đủ tương phản */
-        html:not(.dark) .btn:not(.btn-on-dark) { color: var(--ink); background: rgba(212,175,55,.18); }
-        html:not(.dark) .btn-ghost { background: transparent; color: var(--ink-muted); }
+        html:not(.dark) .btn:not(.btn-on-dark):not(.btn-ghost) { color: var(--ink); background: rgba(212,175,55,.18); }
+        html:not(.dark) .btn-ghost { background: transparent !important; color: var(--ink-muted); }
         .btn-nav-light { border-color: var(--ink) !important; color: var(--ink) !important; background: transparent !important; }
         .btn-nav-light::before { background: var(--ink); }
         .btn-nav-light:hover { color: #fff !important; }
@@ -164,17 +166,17 @@
         }
 
         /* ===== HERO: ảnh + bố cục giữ như bản Hí Phù Thiên, nút & chữ theo phong cách bản Rắn ===== */
-        .hx-cover { position: relative; height: 100vh; min-height: 680px; background: #2d050e; color: #F5EFEB; overflow: hidden; }
+        .hx-cover { position: relative; height: 100vh; min-height: 680px; background: #000; color: #F3EFE6; overflow: hidden; }
         .hx-img { position: absolute; inset: 0 -15% 0 15%; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; transform-origin: 55% 55%; will-change: transform;
             -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24%); mask-image: linear-gradient(90deg, transparent 0, #000 24%); }
-        .hx-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(72,14,27,0.96) 0%, rgba(72,14,27,0.82) 42%, rgba(72,14,27,0.35) 68%, transparent 88%), linear-gradient(0deg, #480e1b 0%, rgba(72,14,27,0.6) 18%, transparent 40%), linear-gradient(180deg, rgba(45,5,14,0.7) 0%, transparent 22%); }
+        .hx-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.82) 0, rgba(0,0,0,.4) 42%, transparent 68%), linear-gradient(0deg, #000 0, transparent 24%), linear-gradient(180deg, rgba(0,0,0,.55) 0, transparent 22%); }
         .hx-wind { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
         .hx-wind i { position: absolute; left: 0; height: 1px; width: 38vw; background: linear-gradient(90deg, transparent, #f3e5ab, transparent); opacity: 0; }
         .hx-line { display: block; white-space: nowrap; overflow: hidden; padding-bottom: .12em; margin-bottom: -.12em; } .hx-line > span { display: inline-block; will-change: transform; }
         .hero-scroll { transform-origin: top; }
         @media (max-width: 860px) {
             .hx-img { inset: 0; object-position: 58% 50%; -webkit-mask-image: none; mask-image: none; }
-            .hx-shade { background: linear-gradient(0deg, rgba(72,14,27,0.98) 0%, rgba(72,14,27,0.80) 50%, rgba(72,14,27,0.35) 80%), linear-gradient(180deg, rgba(45,5,14,0.65) 0%, transparent 20%); }
+            .hx-shade { background: linear-gradient(0deg, rgba(0,0,0,.92) 0, rgba(0,0,0,.55) 45%, rgba(0,0,0,.1) 75%), linear-gradient(180deg, rgba(0,0,0,.5) 0, transparent 20%); }
         }
     </style>
 </head>
