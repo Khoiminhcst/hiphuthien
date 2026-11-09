@@ -22,13 +22,15 @@
                     colors: {
                         brand: {
                             light: '#ffffff',
-                            'light-alt': '#FAF4F4',
-                            dark: '#130608',
-                            brown: '#240c12',
-                            card: '#200b0e',
+                            'light-alt': '#FAF0F0',
+                            dark: '#480e1b',
+                            'dark-alt': '#541220',
+                            deep: '#28040c',
+                            brown: '#5c1524',
+                            card: '#5c1524',
                             gold: '#D4AF37',
                             'gold-light': '#f3e5ab',
-                            burgundy: '#781f19',
+                            burgundy: '#8f1d28',
                             text: '#170a0c',
                             muted: '#64464c'
                         }
@@ -53,7 +55,7 @@
 
         /* ===== DESIGN TOKENS (xem guideline.html) ===== */
         :root {
-            --gold: #D4AF37; --gold-light: #f3e5ab; --ink: #170a0c; --ink-muted: #64464c; --burgundy: #781f19;
+            --gold: #D4AF37; --gold-light: #f3e5ab; --ink: #170a0c; --ink-muted: #64464c; --burgundy: #8f1d28;
             --btn-h: 48px; --btn-radius: 6px;
         }
         /* ===== BUTTON SYSTEM ===== */
@@ -63,7 +65,7 @@
             color: var(--gold); background: rgba(212,175,55,.10); transition: background-color .4s, color .4s, box-shadow .4s, border-color .4s; }
         .btn > * { position: relative; z-index: 1; }
         .btn::before { content: ""; position: absolute; inset: 0; background: var(--gold); transform: scaleY(0); transform-origin: bottom; transition: transform .4s ease-out; z-index: 0; }
-        .btn:hover { color: #130608; box-shadow: 0 0 20px rgba(212,175,55,.35); }
+        .btn:hover { color: #24050a; box-shadow: 0 0 20px rgba(212,175,55,.45); }
         .btn:hover::before { transform: scaleY(1); }
         .btn:focus-visible, .chip-input:focus-visible + .chip, .icon-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
         .btn:disabled { opacity: .5; pointer-events: none; }
@@ -82,8 +84,8 @@
         /* Icon button (social, back-to-top, theme, close) */
         .icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: var(--btn-radius);
             border: 1px solid rgba(17,11,7,.25); color: var(--ink); background: #f9fafb; transition: all .3s; cursor: pointer; }
-        .dark .icon-btn { border-color: rgba(212,175,55,.3); color: var(--gold); background: #240c12; }
-        .icon-btn:hover { background: var(--gold); color: #130608; border-color: var(--gold); }
+        .dark .icon-btn { border-color: rgba(212,175,55,.35); color: var(--gold); background: #5c1524; }
+        .icon-btn:hover { background: var(--gold); color: #28040c; border-color: var(--gold); }
         .icon-btn-round { width: 48px; height: 48px; border-radius: 9999px; }
         .icon-btn-bare { border: 0; background: transparent !important; width: 32px; height: 32px; color: var(--ink-muted); }
         .dark .icon-btn-bare { color: rgba(243,229,171,.7); }
@@ -92,10 +94,10 @@
         .chip { height: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center; text-align: center; padding: .625rem .35rem; border-radius: var(--btn-radius);
             border: 1px solid rgba(17,11,7,.25); background: #f9fafb; color: var(--ink); font-size: 13px; font-weight: 500; white-space: nowrap; transition: all .3s; }
         @media (min-width: 640px) { .chip { font-size: 14px; padding: .75rem .5rem; } }
-        .dark .chip { background: transparent; border-color: rgba(212,175,55,.25); color: var(--gold-light); font-weight: 400; }
+        .dark .chip { background: #5c1524; border-color: rgba(212,175,55,.3); color: var(--gold-light); font-weight: 400; }
         .chip:hover { border-color: var(--gold); }
         .chip-input:checked + .chip { background: rgba(212,175,55,.22); border-color: var(--gold); color: var(--ink); }
-        .dark .chip-input:checked + .chip { color: var(--gold); }
+        .dark .chip-input:checked + .chip { background: rgba(212,175,55,.4); border-color: var(--gold); color: #fff; }
         /* Thumbnail */
         .thumbnail-btn { border: 1px solid transparent; opacity: .6; transition: all .3s; }
         html:not(.dark) .thumbnail-btn { border-color: rgba(17,11,7,.15); }
@@ -141,10 +143,10 @@
         .dark .custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(212, 175, 55, 0.2); }
 
         .nav-scrolled-dark {
-            background-color: rgba(19, 7, 9, 0.88);
+            background-color: rgba(72, 14, 27, 0.96);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212,175,55,0.15);
+            border-bottom: 1px solid rgba(212,175,55,0.25);
         }
         .nav-scrolled-light {
             background-color: rgba(255, 255, 255, 0.9);
@@ -162,21 +164,21 @@
         }
 
         /* ===== HERO: ảnh + bố cục giữ như bản Hí Phù Thiên, nút & chữ theo phong cách bản Rắn ===== */
-        .hx-cover { position: relative; height: 100vh; min-height: 680px; background: #000; color: #F5EFEB; overflow: hidden; }
+        .hx-cover { position: relative; height: 100vh; min-height: 680px; background: #2d050e; color: #F5EFEB; overflow: hidden; }
         .hx-img { position: absolute; inset: 0 -15% 0 15%; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; transform-origin: 55% 55%; will-change: transform;
             -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24%); mask-image: linear-gradient(90deg, transparent 0, #000 24%); }
-        .hx-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,4,5,.88) 0, rgba(19,7,9,.5) 42%, transparent 68%), linear-gradient(0deg, #130608 0, transparent 24%), linear-gradient(180deg, rgba(13,4,5,.6) 0, transparent 22%); }
+        .hx-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(72,14,27,0.96) 0%, rgba(72,14,27,0.82) 42%, rgba(72,14,27,0.35) 68%, transparent 88%), linear-gradient(0deg, #480e1b 0%, rgba(72,14,27,0.6) 18%, transparent 40%), linear-gradient(180deg, rgba(45,5,14,0.7) 0%, transparent 22%); }
         .hx-wind { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
         .hx-wind i { position: absolute; left: 0; height: 1px; width: 38vw; background: linear-gradient(90deg, transparent, #f3e5ab, transparent); opacity: 0; }
         .hx-line { display: block; white-space: nowrap; overflow: hidden; padding-bottom: .12em; margin-bottom: -.12em; } .hx-line > span { display: inline-block; will-change: transform; }
         .hero-scroll { transform-origin: top; }
         @media (max-width: 860px) {
             .hx-img { inset: 0; object-position: 58% 50%; -webkit-mask-image: none; mask-image: none; }
-            .hx-shade { background: linear-gradient(0deg, rgba(19,7,9,.96) 0, rgba(19,7,9,.65) 45%, rgba(19,7,9,.2) 75%), linear-gradient(180deg, rgba(13,4,5,.55) 0, transparent 20%); }
+            .hx-shade { background: linear-gradient(0deg, rgba(72,14,27,0.98) 0%, rgba(72,14,27,0.80) 50%, rgba(72,14,27,0.35) 80%), linear-gradient(180deg, rgba(45,5,14,0.65) 0%, transparent 20%); }
         }
     </style>
 </head>
-<body class="bg-brand-light dark:bg-[#130608] text-brand-text dark:text-brand-gold-light font-sans antialiased overflow-x-hidden transition-colors duration-700">
+<body class="bg-brand-light dark:bg-[#480e1b] text-brand-text dark:text-brand-gold-light font-sans antialiased overflow-x-hidden transition-colors duration-700">
 
     <!-- Nút cuộn lên đầu trang -->
     <button id="backToTopBtn" aria-label="Lên đầu trang" class="icon-btn icon-btn-round fixed bottom-20 right-6 z-[60] !bg-brand-gold !text-brand-dark shadow-[0_4px_20px_rgba(212,175,55,0.4)] hover:scale-110 opacity-0 pointer-events-none translate-y-4">
@@ -208,7 +210,7 @@
             <button id="navMenuBtn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu" class="lg:hidden icon-btn"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
-    <div id="navMenu" class="lg:hidden fixed inset-x-0 top-0 z-40 pt-28 pb-6 px-6 bg-[#130608]/95 backdrop-blur-md border-b border-brand-gold/20 -translate-y-full opacity-0 pointer-events-none transition-all duration-500">
+    <div id="navMenu" class="lg:hidden fixed inset-x-0 top-0 z-40 pt-28 pb-6 px-6 bg-[#480e1b]/98 backdrop-blur-md border-b border-brand-gold/30 -translate-y-full opacity-0 pointer-events-none transition-all duration-500">
         <a href="#kham-pha" class="nav-m block py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-white border-b border-white/10 hover:text-brand-gold">Phong Thủy</a>
         <a href="#che-tac" class="nav-m block py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-white border-b border-white/10 hover:text-brand-gold">Chế Tác</a>
         <a href="#san-pham" class="nav-m block py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-white border-b border-white/10 hover:text-brand-gold">Sản Phẩm</a>
@@ -246,8 +248,8 @@
         </div>
     </header>
 
-    <section id="kham-pha" class="adaptive-section py-16 lg:py-20 relative overflow-hidden bg-white dark:bg-[#130608] border-b border-gray-200 dark:border-brand-gold/10 transition-colors duration-700">
-        <div class="absolute top-0 left-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#781f19]/20 via-brand-gold/10 to-transparent pointer-events-none"></div>
+    <section id="kham-pha" class="adaptive-section py-16 lg:py-20 relative overflow-hidden bg-white dark:bg-[#480e1b] border-b border-gray-200 dark:border-brand-gold/20 transition-colors duration-700">
+        <div class="absolute top-0 left-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#8f1d28]/35 via-brand-gold/15 to-transparent pointer-events-none"></div>
         <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div class="lg:col-span-5 reveal-left">
                 <div class="flex items-center gap-4 mb-5"><span class="w-12 h-[1px] bg-brand-gold/50"></span><p class="text-brand-gold font-medium tracking-[0.2em] text-xs uppercase">Niên Vận Phi Mã</p></div>
@@ -289,15 +291,15 @@
         </div>
     </section>
 
-    <section class="always-dark-section bg-[#130608] relative">
+    <section class="always-dark-section bg-[#340711] relative">
         <!-- Banner -->
-        <div class="w-full relative bg-[#130608] overflow-hidden">
+        <div class="w-full relative bg-[#340711] overflow-hidden">
             <img src="assets/banner-ngua.webp" alt="Thánh Gióng cưỡi Thần Kim Mã phi nước đại" class="reveal-up block w-full max-w-6xl mx-auto h-auto" style="-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)">
-            <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#F6EDED] dark:from-[#130608] to-transparent pointer-events-none"></div>
+            <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#F6EDED] dark:from-[#541220] to-transparent pointer-events-none"></div>
         </div>
     </section>
 
-    <section id="che-tac" class="adaptive-section py-24 lg:py-32 bg-[#F6EDED] dark:bg-brand-dark relative transition-colors duration-700">
+    <section id="che-tac" class="adaptive-section py-24 lg:py-32 bg-[#F6EDED] dark:bg-[#541220] relative transition-colors duration-700">
         <div class="container mx-auto px-6 md:px-12 lg:px-24 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             <div class="lg:col-span-5 reveal-left">
                 <div class="flex items-center gap-4 mb-5"><span class="w-12 h-[1px] bg-brand-gold/50"></span><p class="text-brand-gold font-medium tracking-[0.2em] text-xs uppercase">Kim sắc</p></div>
@@ -308,22 +310,22 @@
                 <p class="text-brand-muted dark:text-brand-gold-light/80 leading-[1.9] font-normal text-base transition-colors duration-700">Sắc kim dát thủ công là ánh sáng của thịnh vượng và quyền lực, danh vọng và niềm tin vững bền. Mỗi ánh phản quang như thiên quang chiếu vận, mở lối vượng đồ hanh thông cho người sở hữu. Hí Phù Thiên không chỉ là tác phẩm nghệ thuật, mà là Bảo Tượng của chí lớn và tầm nhìn minh triết.</p>
             </div>
             <div class="lg:col-span-7 flex flex-col gap-5 reveal-right">
-                <div class="group flex items-start gap-5 md:gap-6 p-6 md:p-8 rounded-2xl bg-white/70 dark:bg-[#240c12]/60 border border-gray-200 dark:border-brand-gold/10 hover:border-brand-gold/40 transition-all duration-500 hover:translate-x-2 shadow-sm">
-                    <div class="shrink-0 w-14 h-14 rounded-full bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center group-hover:bg-brand-gold/20 transition-colors duration-500"><i class="fa-solid fa-hammer text-brand-gold text-xl"></i></div>
+                <div class="group flex items-start gap-5 md:gap-6 p-6 md:p-8 rounded-2xl bg-white/70 dark:bg-[#681829]/90 border border-gray-200 dark:border-brand-gold/25 hover:border-brand-gold/50 transition-all duration-500 hover:translate-x-2 shadow-sm">
+                    <div class="shrink-0 w-14 h-14 rounded-full bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center group-hover:bg-brand-gold/25 transition-colors duration-500"><i class="fa-solid fa-hammer text-brand-gold text-xl"></i></div>
                     <div>
                         <h4 class="text-brand-text dark:text-brand-gold-light font-serif text-xl md:text-2xl mb-2 tracking-wide group-hover:text-brand-gold transition-colors duration-300">Hoàn Toàn Thủ Công</h4>
                         <p class="text-brand-muted dark:text-brand-gold-light/80 text-[15px] leading-relaxed font-normal">Nghệ nhân lành nghề bậc nhất hoàn thiện tác phẩm qua hàng chục bước chế tác tỉ mỉ.</p>
                     </div>
                 </div>
-                <div class="group flex items-start gap-5 md:gap-6 p-6 md:p-8 rounded-2xl bg-white/70 dark:bg-[#240c12]/60 border border-gray-200 dark:border-brand-gold/10 hover:border-brand-gold/40 transition-all duration-500 hover:translate-x-2 shadow-sm">
-                    <div class="shrink-0 w-14 h-14 rounded-full bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center group-hover:bg-brand-gold/20 transition-colors duration-500"><svg class="w-6 h-6 text-brand-gold relative z-10" fill="currentColor" viewBox="0 0 256 256"><path d="M239.5,121.73l-45.71-15.35L178.43,60.67a12,12,0,0,0-22.86,0l-15.36,45.71L94.5,121.73a12,12,0,0,0,0,22.86l45.71,15.36,15.36,45.71a12,12,0,0,0,22.86,0l15.36-45.71,45.71-15.36A12,12,0,0,0,239.5,121.73Zm-65.73,34a12,12,0,0,0-7.5,7.5l-12.77,38L140.73,163.2a12,12,0,0,0-7.5-7.5l-38-12.77,38-12.77a12,12,0,0,0,7.5-7.5l12.77-38,12.77,38a12,12,0,0,0,7.5,7.5l38,12.77ZM112,56A8,8,0,0,1,104,64H88V80a8,8,0,0,1-16,0V64H56a8,8,0,0,1,0-16H72V32a8,8,0,0,1,16,0V48H104A8,8,0,0,1,112,56ZM88,176a8,8,0,0,0-8,8v16H64a8,8,0,0,0,0,16H80v16a8,8,0,0,0,16,0V216h16a8,8,0,0,0,0-16H96V184A8,8,0,0,0,88,176Z"></path></svg></div>
+                <div class="group flex items-start gap-5 md:gap-6 p-6 md:p-8 rounded-2xl bg-white/70 dark:bg-[#681829]/90 border border-gray-200 dark:border-brand-gold/25 hover:border-brand-gold/50 transition-all duration-500 hover:translate-x-2 shadow-sm">
+                    <div class="shrink-0 w-14 h-14 rounded-full bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center group-hover:bg-brand-gold/25 transition-colors duration-500"><svg class="w-6 h-6 text-brand-gold relative z-10" fill="currentColor" viewBox="0 0 256 256"><path d="M239.5,121.73l-45.71-15.35L178.43,60.67a12,12,0,0,0-22.86,0l-15.36,45.71L94.5,121.73a12,12,0,0,0,0,22.86l45.71,15.36,15.36,45.71a12,12,0,0,0,22.86,0l15.36-45.71,45.71-15.36A12,12,0,0,0,239.5,121.73Zm-65.73,34a12,12,0,0,0-7.5,7.5l-12.77,38L140.73,163.2a12,12,0,0,0-7.5-7.5l-38-12.77,38-12.77a12,12,0,0,0,7.5-7.5l12.77-38,12.77,38a12,12,0,0,0,7.5,7.5l38,12.77ZM112,56A8,8,0,0,1,104,64H88V80a8,8,0,0,1-16,0V64H56a8,8,0,0,1,0-16H72V32a8,8,0,0,1,16,0V48H104A8,8,0,0,1,112,56ZM88,176a8,8,0,0,0-8,8v16H64a8,8,0,0,0,0,16H80v16a8,8,0,0,0,16,0V216h16a8,8,0,0,0,0-16H96V184A8,8,0,0,0,88,176Z"></path></svg></div>
                     <div>
                         <h4 class="text-brand-text dark:text-brand-gold-light font-serif text-xl md:text-2xl mb-2 tracking-wide group-hover:text-brand-gold transition-colors duration-300">Mạ Vàng 24K · Mạ Đồng Nano</h4>
                         <p class="text-brand-muted dark:text-brand-gold-light/80 text-[15px] leading-relaxed font-normal">Hai phiên bản hoàn thiện, trên cốt đồng hoặc cốt đá tổng hợp tùy biến.</p>
                     </div>
                 </div>
-                <div class="group flex items-start gap-5 md:gap-6 p-6 md:p-8 rounded-2xl bg-white/70 dark:bg-[#240c12]/60 border border-gray-200 dark:border-brand-gold/10 hover:border-brand-gold/40 transition-all duration-500 hover:translate-x-2 shadow-sm">
-                    <div class="shrink-0 w-14 h-14 rounded-full bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center group-hover:bg-brand-gold/20 transition-colors duration-500"><i class="fa-regular fa-gem text-brand-gold text-xl"></i></div>
+                <div class="group flex items-start gap-5 md:gap-6 p-6 md:p-8 rounded-2xl bg-white/70 dark:bg-[#681829]/90 border border-gray-200 dark:border-brand-gold/25 hover:border-brand-gold/50 transition-all duration-500 hover:translate-x-2 shadow-sm">
+                    <div class="shrink-0 w-14 h-14 rounded-full bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center group-hover:bg-brand-gold/25 transition-colors duration-500"><i class="fa-regular fa-gem text-brand-gold text-xl"></i></div>
                     <div>
                         <h4 class="text-brand-text dark:text-brand-gold-light font-serif text-xl md:text-2xl mb-2 tracking-wide group-hover:text-brand-gold transition-colors duration-300">100 Bản Giới Hạn</h4>
                         <p class="text-brand-muted dark:text-brand-gold-light/80 text-[15px] leading-relaxed font-normal">Chỉ 100 phiên bản cho mỗi tác phẩm, kèm hộp và chứng thư độc bản.</p>
@@ -334,9 +336,9 @@
     </section>
 
     <!-- Đã chỉnh màu nền Light Mode thành Trắng (bg-white) -->
-    <section id="san-pham" class="adaptive-section w-full relative z-10 py-16 lg:py-24 bg-white dark:bg-[#18080c] overflow-hidden transition-colors duration-700 border-t border-gray-200 dark:border-transparent">
+    <section id="san-pham" class="adaptive-section w-full relative z-10 py-16 lg:py-24 bg-white dark:bg-[#3e0b17] overflow-hidden transition-colors duration-700 border-t border-gray-200 dark:border-brand-gold/20">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-gray-300 dark:via-brand-gold/40 to-transparent transition-colors duration-700"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent dark:from-[#781f19]/20 via-transparent dark:via-[#18080c] to-transparent dark:to-[#18080c] pointer-events-none transition-colors duration-700"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent dark:from-[#8f1d28]/35 via-transparent dark:via-[#3e0b17] to-transparent dark:to-[#3e0b17] pointer-events-none transition-colors duration-700"></div>
 
         <div class="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-14 relative z-10">
             <!-- Cột Trái: Ảnh -->
@@ -353,7 +355,7 @@
                 </div>
             </div>
 
-            <div class="w-full lg:w-[48%] flex flex-col rounded-2xl border border-gray-200 dark:border-brand-gold/15 bg-white dark:bg-[#240c12]/50 p-6 md:p-8 lg:p-10 shadow-sm">
+            <div class="w-full lg:w-[48%] flex flex-col rounded-2xl border border-gray-200 dark:border-brand-gold/30 bg-white dark:bg-[#5c1524]/95 p-6 md:p-8 lg:p-10 shadow-sm">
                 <div>
                     <div class="mb-6 border-b border-gray-300 dark:border-white/10 pb-6 transition-colors duration-700">
                         <p class="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-3">Linh Vật Bính Ngọ · 2026</p>
@@ -439,7 +441,7 @@
         </div>
     </section>
 
-    <section class="adaptive-section py-24 lg:py-32 bg-[#F6EDED] dark:bg-[#130608] relative overflow-hidden transition-colors duration-700 border-t border-gray-200 dark:border-brand-gold/10">
+    <section class="adaptive-section py-24 lg:py-32 bg-[#F6EDED] dark:bg-[#480e1b] relative overflow-hidden transition-colors duration-700 border-t border-gray-200 dark:border-brand-gold/20">
         <div class="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-gold/10 dark:from-brand-gold/5 via-transparent to-transparent pointer-events-none transition-colors duration-700"></div>
 
         <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
@@ -480,10 +482,10 @@
         </div>
     </section>
 
-    <section id="tac-gia" class="always-dark-section relative min-h-[90vh] flex items-center py-24 overflow-hidden border-t border-brand-gold/10 bg-[#0d0405]">
+    <section id="tac-gia" class="always-dark-section relative min-h-[90vh] flex items-center py-24 overflow-hidden border-t border-brand-gold/20 bg-[#24050a]">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.khoiminhcst.vn/uploads//images/2021/landingpage/trauvang/author1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/1a080c/000000?text=Anh+Tac+Gia';" alt="Nhà điêu khắc Vũ Dũng" class="w-full h-full object-cover grayscale">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#0d0405] via-[#0d0405]/85 to-transparent"></div>
+            <img src="https://images.khoiminhcst.vn/uploads//images/2021/landingpage/trauvang/author1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/24050a/000000?text=Anh+Tac+Gia';" alt="Nhà điêu khắc Vũ Dũng" class="w-full h-full object-cover grayscale">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#24050a] via-[#24050a]/85 to-transparent"></div>
         </div>
 
         <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
@@ -509,7 +511,7 @@
         </div>
     </section>
 
-    <section class="adaptive-section py-24 relative bg-transparent dark:bg-brand-dark overflow-hidden border-t border-gray-200 dark:border-brand-gold/15 transition-colors duration-700">
+    <section class="adaptive-section py-24 relative bg-transparent dark:bg-[#440d19] overflow-hidden border-t border-gray-200 dark:border-brand-gold/20 transition-colors duration-700">
         <!-- Nền giấy cho Light mode -->
         <div class="absolute inset-0 bg-[url('https://khoiminhcst.vn/static/landingpage/hi-long-van/images/bg_paper2.jpg')] bg-cover bg-center bg-fixed dark:hidden z-0 opacity-80 mix-blend-multiply pointer-events-none"></div>
         <div class="absolute inset-0 bg-white/40 dark:hidden z-0 pointer-events-none"></div>
@@ -524,7 +526,7 @@
             </div>
 
             <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-                <article class="reveal-up flex flex-col rounded-2xl overflow-hidden bg-white/70 dark:bg-[#240c12]/60 border border-gray-300 dark:border-brand-gold/20 shadow-sm">
+                <article class="reveal-up flex flex-col rounded-2xl overflow-hidden bg-white/70 dark:bg-[#521422]/85 border border-gray-300 dark:border-brand-gold/30 shadow-sm">
                     <div class="grid grid-cols-2 gap-1.5 p-1.5 h-[440px] grid-rows-[3fr_2fr]">
                         <img src="assets/photos/che-2.webp" alt="Điêu khắc gia tạo hình tượng bằng đất sét" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
                         <img src="assets/photos/che-1.webp" alt="Chỉnh sửa chi tiết tượng đất sét" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
@@ -538,7 +540,7 @@
                         <p class="text-[15px] leading-[1.8] font-normal text-brand-muted dark:text-brand-gold-light/80">Tác phẩm điêu khắc được hoàn thiện trên chất liệu đất sét dương bản.</p>
                     </div>
                 </article>
-                <article class="reveal-up flex flex-col rounded-2xl overflow-hidden bg-white/70 dark:bg-[#240c12]/60 border border-gray-300 dark:border-brand-gold/20 shadow-sm">
+                <article class="reveal-up flex flex-col rounded-2xl overflow-hidden bg-white/70 dark:bg-[#521422]/85 border border-gray-300 dark:border-brand-gold/30 shadow-sm">
                     <div class="grid grid-cols-2 gap-1.5 p-1.5 h-[440px] grid-rows-[3fr_2fr]">
                         <img src="assets/photos/kh-1.webp" alt="Bản đất sét dương bản trước khi lấy khuôn" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
                         <img src="assets/photos/kh-3.webp" alt="Chi tiết người và ngựa trên bản gốc" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
@@ -552,7 +554,7 @@
                         <p class="text-[15px] leading-[1.8] font-normal text-brand-muted dark:text-brand-gold-light/80">Đổ khuôn âm bản để chuyển sang những chất liệu bền vững như cốt đồng hay cốt đá tổng hợp tùy biến.</p>
                     </div>
                 </article>
-                <article class="reveal-up flex flex-col rounded-2xl overflow-hidden bg-white/70 dark:bg-[#240c12]/60 border border-gray-300 dark:border-brand-gold/20 shadow-sm">
+                <article class="reveal-up flex flex-col rounded-2xl overflow-hidden bg-white/70 dark:bg-[#521422]/85 border border-gray-300 dark:border-brand-gold/30 shadow-sm">
                     <div class="grid grid-cols-2 gap-1.5 p-1.5 h-[440px] grid-rows-3">
                         <img src="assets/photos/mv-1.webp" alt="Dát lá vàng lên tượng ngựa" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
                         <img src="assets/photos/mv-2.webp" alt="Phủi vàng bằng cọ mềm" loading="lazy" class="w-full h-full min-h-0  object-cover rounded transition-all duration-500 grayscale hover:grayscale-0 cursor-pointer">
@@ -595,7 +597,7 @@
         </div>
     </section>
 
-    <footer class="adaptive-section bg-white dark:bg-[#130608] pt-20 pb-10 border-t border-gray-200 dark:border-brand-gold/10 transition-colors duration-700">
+    <footer class="adaptive-section bg-white dark:bg-[#28040c] pt-20 pb-10 border-t border-gray-200 dark:border-brand-gold/20 transition-colors duration-700">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 mb-16">
                 
@@ -660,7 +662,7 @@
     </div>
 
     <div id="orderModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 px-4">
-        <div id="orderModalContent" class="bg-white dark:bg-[#18080c] border border-gray-200 dark:border-brand-gold/20 w-full max-w-lg rounded-xl shadow-2xl transform scale-95 transition-all duration-300 overflow-hidden flex flex-col max-h-[90vh]">
+        <div id="orderModalContent" class="bg-white dark:bg-[#440d19] border border-gray-200 dark:border-brand-gold/30 w-full max-w-lg rounded-xl shadow-2xl transform scale-95 transition-all duration-300 overflow-hidden flex flex-col max-h-[90vh]">
             
             <div class="flex justify-between items-center px-6 py-4 border-b border-gray-200 dark:border-white/5">
                 <h3 class="font-serif text-xl font-medium text-brand-text dark:text-white tracking-wide">Thông Tin Đặt Hàng</h3>
